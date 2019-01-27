@@ -26,14 +26,6 @@ function radar_visualization(config) {
   var container = document.getElementById(config.container_id);
   var element = document.getElementById(config.svg_id);
 
-  function autoHeight(element) {
-    element.setAttribute('height', element.clientWidth || element.offsetWidth);
-  }
-  autoHeight(element);
-  window.addEventListener('resize', function () {
-    autoHeight(element);
-  })
-
   // custom random number generator, to make random sequence reproducible
   // source: https://stackoverflow.com/questions/521295
   var seed = 42;

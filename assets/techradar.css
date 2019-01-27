@@ -17,11 +17,13 @@
   flex: 1 1 auto;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .techradar__quadrant-title {
   font-size: 18px;
   margin: 0 0 12px;
+  width: 100%;
 }
 
 .techradar__ring-legend {
@@ -44,6 +46,11 @@
 }
 
 .techradar__quadrant ol {
+}
+
+.techradar__svg {
+  width: 45vw;
+  height: 45vw;
 }
 
 .techradar__quadrant0 > svg, .techradar__quadrant1 > svg {
@@ -72,7 +79,6 @@ li.techradar--active {
   color: #FFF;
 }
 
-
 .techradar__bubble {
   opacity: 0;
   pointer-events: none;
@@ -88,4 +94,12 @@ li.techradar--active {
 }
 .techradar__bubble path {
   fill: #333;
+}
+
+.techradar__quadrant2, .techradar__quadrant1 {
+    align-items: flex-end;
+}
+
+.techradar__quadrant0, .techradar__quadrant3 {
+    align-items: flex-start;
 }
