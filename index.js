@@ -46,7 +46,7 @@ hexo.extend.tag.register('techradar', function (args, content) {
   }
 
   let html = '';
-  html += '<div class="techradar" id="'+radar_config.container_id+'">';
+  html += '<div class="techradar" id="'+radar_config.container_id+'">\n';
   for (var quadrant of [2,3,1,0]) {
     html += '<div class="techradar__quadrant techradar__quadrant'+quadrant+'">';
     html += '<header class="techradar__quadrant-title">'+util.escapeHTML(radar_config.quadrants[quadrant].name)+'</header>';
@@ -64,19 +64,19 @@ hexo.extend.tag.register('techradar', function (args, content) {
     }
     html += '</div>';
     html += '<svg id="'+radar_config.container_id+quadrant+'" width="100%">';
-    html += '</div>';
+    html += '</div>\n';
   }
-  html += '<link rel="stylesheet" href="/css/techradar.css"/>';
-  html += '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>';
-  html += '<script src="/scripts/techradar.js"></script>';
-  html += '<script>';
-  html += 'var radar_config = '+JSON.stringify(radar_config)+';';
+  html += '<link rel="stylesheet" href="/css/techradar.css"/>\n';
+  html += '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>\n';
+  html += '<script src="/scripts/techradar.js"></script>\n';
+  html += '<script>\n';
+  html += 'var radar_config = '+JSON.stringify(radar_config)+';\n';
   for (var quadrant of [2,3,1,0]) {
   html += 'radar_visualization(Object.assign({}, radar_config, {'+
     'svg_id: radar_config.container_id+'+quadrant+', zoomed_quadrant: '+quadrant+
-  '}));';
+  '}));\n';
   }
-  html += '</script>';
+  html += '</script>\n\n';
 
   html += '</div>';
 
