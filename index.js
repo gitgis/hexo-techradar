@@ -66,6 +66,8 @@ hexo.extend.tag.register('techradar', function (args, content) {
     html += '<svg id="'+radar_config.container_id+quadrant+'" width="100%">';
     html += '</div>\n';
   }
+  html += '</div>\n\n';
+
   html += '<link rel="stylesheet" href="/css/techradar.css"/>\n';
   html += '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>\n';
   html += '<script src="/scripts/techradar.js"></script>\n';
@@ -77,8 +79,6 @@ hexo.extend.tag.register('techradar', function (args, content) {
   '}));\n';
   }
   html += '//--></script>\n\n';
-
-  html += '</div>';
 
   return html;
 
