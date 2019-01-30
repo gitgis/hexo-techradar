@@ -69,14 +69,14 @@ hexo.extend.tag.register('techradar', function (args, content) {
   html += '<link rel="stylesheet" href="/css/techradar.css"/>\n';
   html += '<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>\n';
   html += '<script src="/scripts/techradar.js"></script>\n';
-  html += '<script>\n';
+  html += '<script>//<!--\n';
   html += 'var radar_config = '+JSON.stringify(radar_config)+';\n';
   for (var quadrant of [2,3,1,0]) {
   html += 'radar_visualization(Object.assign({}, radar_config, {'+
     'svg_id: radar_config.container_id+'+quadrant+', zoomed_quadrant: '+quadrant+
   '}));\n';
   }
-  html += '</script>\n\n';
+  html += '//--></script>\n\n';
 
   html += '</div>';
 
