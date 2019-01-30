@@ -10,7 +10,14 @@
   flex-direction: column;
   flex: 1 1 50%;
   max-width: 50%;
-  min-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .techradar__quadrant {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
 }
 
 .techradar__quadrant-legend {
@@ -55,6 +62,12 @@
 
 .techradar__quadrant0 > svg, .techradar__quadrant1 > svg {
   order: -1;
+}
+
+@media (max-width: 480px) {
+  .techradar__quadrant0 > svg, .techradar__quadrant1 > svg {
+    order: initial;
+  }
 }
 
 .techradar__grid-line {
